@@ -196,7 +196,7 @@ def contfclrdisk():
             path = path + '/' + dirpath
             hvideofile = datetime.strftime(datetime.now(), "%H")
             mvideofile = datetime.strftime(datetime.now(), "%M")
-            log(dirpath + ' ' + path + ' ' + str(hvideofile) + ' ' + str(mvideofile) + ' ' + textnamedisk)
+            #log(dirpath + ' ' + path + ' ' + str(hvideofile) + ' ' + str(mvideofile) + ' ' + textnamedisk)
             if int(mvideofile) > 30:
                 if os.path.exists(path):
                     onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
@@ -209,7 +209,7 @@ def contfclrdisk():
                         clockh = clockh[0]
                         if int(clockh) == int(hvideofile):
                             flaghour = True
-                            log(str(flaghour))
+                            #log(str(flaghour))
                             # print("Файл существует")
                         a = a + 1
                     if flaghour == False:
